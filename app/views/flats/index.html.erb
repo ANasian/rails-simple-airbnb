@@ -14,7 +14,7 @@
 <% @flats.each do |flat| %>
   <div class="col-4">
       <div class="card mb-3" style="width: 18rem;">
-        <!-- <img class="card-img-top" alt="img-flat"> -->
+        <%= image_tag flat.image_url, class: "card-img-top", alt: "img-flat" %>
         <div class="card-body">
           <h5 class="card-title"><%= flat.name %></h5>
           <p class="card-text"><small><%= flat.address %></small></p>
