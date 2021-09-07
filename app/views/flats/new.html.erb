@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-5 m-auto bg-white p-3">
+    <h1><strong>Add a New Flat</strong></h1>
+    <%= simple_form_for(@flat, :defaults => { :input_html => { :class => "bg-white" } }) do |f| %>
+      <%= f.input :name %>
+      <br>
+      <%= f.input :address %>
+      <br>
+      <%= f.input :description %>
+      <br>
+      <%= f.input :price_per_night, as: :integer %>
+      <br>
+      <%= f.input :number_of_guests, as: :integer %>
+      <br>
+      <%= f.submit "Create Flat", class: "btn btn-primary text-light" %>
+    <% end %>
+  </div>
+</div>

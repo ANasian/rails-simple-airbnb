@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-12">
+    <h1>All our Flats</h1>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-4">
+    <p>All <%= @flats.count %> flats.</p>
+  </div>
+</div>
+
+<div class="row">
+<% @flats.each do |flat| %>
+  <div class="col-4">
+      <div class="card mb-3" style="width: 18rem;">
+        <!-- <img class="card-img-top" alt="img-flat"> -->
+        <div class="card-body">
+          <h5 class="card-title"><%= flat.name %></h5>
+          <p class="card-text"><small><%= flat.address %></small></p>
+        </div>
+        <div class="card-body d-flex">
+          <i class="material-icons mr-2 ps-2">people</i><span><%= flat.number_of_guests %></span>
+          <i class="material-icons mr-2 ps-2">euro_symbol</i><span><%= flat.price_per_night %></span>
+        </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><%= link_to "More info", flat_path(flat), class: "text-decoration-none" %></li>
+          </ul>
+      </div>
+    </div>
+<% end %>
+</div>
